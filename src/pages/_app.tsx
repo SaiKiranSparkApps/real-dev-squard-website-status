@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { ToastContainer } from 'react-toastify';
 import IsUserAuthorizedContext from '@/context/isUserAuthorized';

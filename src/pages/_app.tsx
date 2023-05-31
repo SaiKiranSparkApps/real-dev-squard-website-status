@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from '@/app/store';
 import 'react-toastify/dist/ReactToastify.css';
 import '@/styles/index.scss';
+import { useRouter } from "next/router";
 
 if (process.env.NEXT_PUBLIC_API_MOCKING === 'ON') {
     require('../../__mocks__/index');
@@ -13,6 +14,11 @@ if (process.env.NEXT_PUBLIC_API_MOCKING === 'ON') {
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     const rdxStore = store();
+    const router = useRouter();
+
+    useEffect(() => {
+      router.push("/?dev=true");
+    }, []);
     return (
         <Provider store={rdxStore}>
             <IsUserAuthorizedContext>

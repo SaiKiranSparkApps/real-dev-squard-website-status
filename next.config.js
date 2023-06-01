@@ -35,7 +35,7 @@ const nextConfig = {
 				]
 			}, 
 			{ 
-				source: '/tasks/:taskid', 
+				source: '/tasks/:id', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 

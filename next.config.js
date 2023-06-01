@@ -5,15 +5,15 @@ const nextConfig = {
       			origin: "*",
     		}),
   	],
-        async rewrites() { 
+       /* async rewrites() { 
 		return [ 
 			{ 
 				source: '/progress/:id', 
-				destination: 'http://dev.realdevsquad.com/progress/:id',
+				destination: 'https://dev.realdevsquad.com/progress/:id',
 			}
                         //'Access-Control-Allow-Origin': 'dev.realdevsquad.com',
                 ]
-        }, 
+        }, */
 	async headers() { 
 		return [ 
 			{ 
@@ -21,7 +21,7 @@ const nextConfig = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'http://dev.realdevsquad.com' //'*'
+						value: '*' //'*'
 					}
 				]	
 			}, 
@@ -30,7 +30,7 @@ const nextConfig = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'http://dev.realdevsquad.com' //'*' 
+						value: '*' //'*' 
 					}
 				]
 			}, 
@@ -39,7 +39,7 @@ const nextConfig = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'http://dev.realdevsquad.com' 
+						value: '*' 
 					}
 				] 
 			},

@@ -35,25 +35,16 @@ const nextConfig = {
 				]	
 			}, 
 			{ 
-				source: '/progress/:id*', 
+				source: '/progress/:id', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
 						value: '*' //'*' 
 					}
 				]
-			}, 
-			{ 
-				source: '/tasks/(.*)', 
-				headers: [
-					{ 
-						key: 'Access-Control-Allow-Origin', 
-						value: '*' 
-					}
-				]  
 			},
 			{ 
-				source: '/tasks/:id*', 
+				source: '/tasks/:id', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 

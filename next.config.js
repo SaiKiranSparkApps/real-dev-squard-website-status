@@ -1,5 +1,5 @@
-//import cors from 'cors';
-module.exports = {
+import cors from 'cors';
+const nextConfig = {
 	middleware: [
     		cors({
       			origin: "*",
@@ -49,3 +49,5 @@ module.exports = {
 		domains: ['raw.githubusercontent.com', 'res.cloudinary.com'],
 	},
 };
+
+module.exports = nextConfig;

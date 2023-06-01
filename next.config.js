@@ -17,7 +17,16 @@ const nextConfig = {
 	async headers() { 
 		return [ 
 			{ 
-				source: '/:id*', 
+				source: '/', 
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: '*' //'*'
+					}
+				]	
+			},
+			{ 
+				source: '/*', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
@@ -26,7 +35,7 @@ const nextConfig = {
 				]	
 			}, 
 			{ 
-				source: '/progress/:id', 
+				source: '/progress/:id*', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
@@ -34,6 +43,15 @@ const nextConfig = {
 					}
 				]
 			}, 
+			{ 
+				source: '/tasks/*', 
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: '*' 
+					}
+				]  
+			},
 			{ 
 				source: '/tasks/:id*', 
 				headers: [

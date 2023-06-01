@@ -15,7 +15,7 @@ module.exports = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'https://dev.realdevsquad.com' //'*'
+						value: 'https://dev.realdevsquad.com:3000' //'*'
 					}
 				]	
 			}, 
@@ -24,7 +24,7 @@ module.exports = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'https://dev.realdevsquad.com' //'*' 
+						value: 'https://dev.realdevsquad.com:3000' //'*' 
 					}
 				]
 			}

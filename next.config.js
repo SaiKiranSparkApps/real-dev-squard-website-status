@@ -61,6 +61,15 @@ const nextConfig = {
 					}
 				] 
 			},
+			{ 
+				source: '/tasks/:id/(.*)', 
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: '*' 
+					}
+				] 
+			},
 		]
 	},
 	images: {

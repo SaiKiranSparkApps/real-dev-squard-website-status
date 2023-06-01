@@ -12,17 +12,21 @@ module.exports = {
 		return [ 
 			{ 
 				source: '/*', 
-				headers: { 
-					key: 'Access-Control-Allow-Origin', 
-					value: '*'
-				}
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: '*'
+					}
+				]	
 			}, 
 			{ 
 				source: '/progress/:id', 
-				headers: { 
-					key: 'Access-Control-Allow-Origin', 
-					value: '*' 
-				} 
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: '*' 
+					}
+				]
 			}
 		]
 	},

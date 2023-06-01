@@ -26,7 +26,7 @@ const nextConfig = {
 				]	
 			},
 			{ 
-				source: '/**', 
+				source: '/(*)', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
@@ -44,7 +44,7 @@ const nextConfig = {
 				]
 			}, 
 			{ 
-				source: '/tasks/**', 
+				source: '/tasks/(*)', 
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 

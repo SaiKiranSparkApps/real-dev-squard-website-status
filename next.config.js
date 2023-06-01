@@ -1,4 +1,10 @@
+import cors from 'cors';
 module.exports = {
+	middleware: [
+    		cors({
+      			origin: "*",
+    		}),
+  	],
         async rewrites() { 
 		return [ 
 			{ 

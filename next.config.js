@@ -5,15 +5,23 @@ const nextConfig = {
       			origin: "*",
     		}),
   	],
-       /* async rewrites() { 
+        async rewrites() { 
 		return [ 
 			{ 
 				source: '/progress/:id', 
 				destination: 'https://dev.realdevsquad.com/progress/:id',
+			},
+			{ 
+				source: '/tasks/:id', 
+				destination: 'https://dev.realdevsquad.com/tasks/:id',
+			},
+			{ 
+				source: '/', 
+				destination: 'https://dev.realdevsquad.com/',
 			}
                         //'Access-Control-Allow-Origin': 'dev.realdevsquad.com',
                 ]
-        }, */
+        },
 	async headers() { 
 		return [ 
 			{ 

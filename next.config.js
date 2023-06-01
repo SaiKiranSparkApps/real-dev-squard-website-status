@@ -2,8 +2,8 @@ module.exports = {
         async rewrites() { 
 		return [ 
 			{ 
-				source: '/progress/:id*', 
-				destination: 'https://dev.realdevsquad.com/progress/:id*',
+				source: '/progress/:id', 
+				destination: 'http://dev.realdevsquad.com/progress/:id',
 			}
                         //'Access-Control-Allow-Origin': 'dev.realdevsquad.com',
                 ]
@@ -15,7 +15,7 @@ module.exports = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'https://dev.realdevsquad.com:3000' //'*'
+						value: 'http://dev.realdevsquad.com' //'*'
 					}
 				]	
 			}, 
@@ -24,10 +24,19 @@ module.exports = {
 				headers: [
 					{ 
 						key: 'Access-Control-Allow-Origin', 
-						value: 'https://dev.realdevsquad.com:3000' //'*' 
+						value: 'http://dev.realdevsquad.com' //'*' 
 					}
 				]
-			}
+			}, 
+			{ 
+				source: '/tasks/:taskid', 
+				headers: [
+					{ 
+						key: 'Access-Control-Allow-Origin', 
+						value: 'http://dev.realdevsquad.com' 
+					}
+				] 
+			},
 		]
 	},
 	images: {

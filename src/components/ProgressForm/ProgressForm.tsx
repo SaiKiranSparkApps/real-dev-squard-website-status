@@ -67,7 +67,7 @@ const ProgressForm = ({ questions }: formProps) => {
                 setIsLoading(false);
             })
             .catch((error) => {
-                toast(ERROR, error?.data?.message);
+                toast(ERROR, error.data.message);
                 setIsLoading(false);
             });
     };
